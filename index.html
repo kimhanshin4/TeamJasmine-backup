@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스민이란다</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jangCss.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- 부트스트랩~!!!!-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/styles_hs.css" rel="stylesheet" />
+</head>
+<!-- 제이쿼리!!!!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script/hanshin-header-script.js"></script>
+<script type="module">
+    // Firebase SDK 라이브러리 가져오기
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    // Firebase 구성 정보 설정
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDhEYXbSXaESon5xYLNfwlxP8pbm3zgdpM",
+        authDomain: "sparta-ebe55.firebaseapp.com",
+        projectId: "sparta-ebe55",
+        storageBucket: "sparta-ebe55.appspot.com",
+        messagingSenderId: "552512521607",
+        appId: "1:552512521607:web:f02f0597f91b63ec32ff22",
+        measurementId: "G-YRNVYPMN1T"
+    };
+    // Firebase 인스턴스 초기화
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    //포스팅 버튼aa
+    $("#postingbtn").click(async function () {
+        let name = $('#name').val();
+        let message = $('#message').val();
+
+
+        // Firebase 데이터 보내기
+        let doc = { 'name': name, 'message': message };
+        await addDoc(collection(db, "Sprta_Mini_Pj"), doc);
+        alert('메세지가 저장되었습니다!');
+        window.location.reload();
+    })
+
+    // Firebase 데이터 가져오기
+    let docs = await getDocs(collection(db, "Sprta_Mini_Pj"));
+    docs.forEach((doc) => {
+        let row = doc.data();
+        console.log(row);
+        let name = row['name'];
+        let message = row['message'];
+        let temp_html = `
+        <div class="col">
+                    <div class="card">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/blog.spartacodingclub.kr/210709_blog_4.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${name}</h5>
+                            <p class="card-text">${message}</p>
+                        </div>
+                    </div>
+                </div>`
+        $('#card').append(temp_html)
+    });
+</script>
+<button id="topBtn" type="button" class="topBtn">Top</button>
+<header>
+    <div id="HeaderBox1" class="HeaderBox1">
+        <div id="HeaderBox2" class="HeaderBox2">
+            <div id="JBox" class="">
+                <div id="JasmineBox" class="Jasmine">
+                    <p><a href="#Jasmine" id="Jasmine" class="alink">자스민</a></p>
+                </div>
+            </div>
+            <div id="JSubBox" class="JSubBox">
+                <div>
+                    <a href="#HSIntroduce" id="JSub" class="alink">우리팀은</a>
+                </div>
+                <div>
+                    <a href="#HSCharacteristic" id="JSub" class="alink">팀원소개</a>
+                </div>
+                <div>
+                    <a href="#HSGoal" id="JSub" class="alink">목표&약속</a>
+                </div>
+                <!-- <div>
+                    <a href="#Promises" id="JSub" class="alink">약속</a>
+                </div> -->
+                <div>
+                    <a href="#HSGuestBook" id="JSub" class="alink">방명록</a>
+                </div>
+                <!-- <div>
+                    <a href="#Contact" id="JSub" class="alink">연락처</a>
+                </div> -->
+                <p id="weather" class="">오늘은~ </p>
+            </div>
+            <div id="weatherBox">
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<body>
+    <!--김한신-->
+
+    <!--김한신-->
+    <!--장규빈-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <div class="jas" id="HSIntroduce">
+                    <p><I>Team Jasmine</I></p>
+                </div>
+                <p style="font-size: 25px; ">우리는 자스민!<br>
+                    자스민이란 JAVA와 Spring을 사용하는 백성民 이란 뜻을 가지고 있어요.<br>
+                    이제 막 배우고 다뤄가기 시작하고 있지만 저희의 가능성은 실로 무궁무진하죠!</p>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <span>
+                        <box style="width: 300px; height: 300px; overflow: hidden;">
+                            <img style="width: 100%; height: 100%; object-fit: cover;"
+                                src="https://item.kakaocdn.net/do/4047a4c976cbcc64e4c9b8c83dbf3fd6f43ad912ad8dd55b04db6a64cddaf76d"
+                                loop="infinite">
+                        </box>
+                    </span>
+                    <h4>**다섯 사나이**</h4>
+                    <p class="text-center5">
+                        - 세상에나 다섯명인데 전부 남자<br>
+                        - 취업의 장벽마저 뚫어버릴 예정<br>
+                    </p>
+                </div>
+                <div class="col">
+                    <span>
+                        <box style="width: 300px; height: 300px; overflow: hidden;">
+                            <img style="width: 100%; height: 100%; object-fit: cover;"
+                                src="img/triforce-ocarina-of-time.gif" loop="infinite">
+                        </box>
+                    </span>
+                    <h4>**삼위일체**</h4>
+                    <p class="text-center5">
+                        - 전공자 비전공자 전직개발자가 모두 모였다!<br>
+                        - 나아가고 밀어주고 당겨주고 시너지 가득<br>
+                    </p>
+                </div>
+                <div class="col">
+                    <span>
+                        <box style="width: 300px; height: 300px; border-radius: 70%; overflow: hidden;">
+                            <img style="width: 100%; height: 100%; object-fit: cover;"
+                                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/45e35feb-dd85-4aec-9f8d-79b7f9573776/dd8zwst-80d8e6ae-c6ee-4d00-89d4-2030f01e4e3e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ1ZTM1ZmViLWRkODUtNGFlYy05ZjhkLTc5YjdmOTU3Mzc3NlwvZGQ4endzdC04MGQ4ZTZhZS1jNmVlLTRkMDAtODlkNC0yMDMwZjAxZTRlM2UuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ElSNwBeq3xEtJBGJu5UM2acYXF7dKik80VZ4GVbV5ME"
+                                loop="infinite">
+                        </box>
+                    </span>
+                    <h4>**여린마음**</h4>
+                    <p class="text-center5">
+                        - 버그 나면 여려짐<br>
+                        - 알고보면 섬세하고 감수성 풍부한 사나이들<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--장규빈-->
+    <!--장숭혁-->
+    <div class="div-whole" id="HSCharacteristic">
+        <div class="div-left-comment">
+            <div class="div-space-comment">
+                <div class="wood-image">
+                <p class="text-center3">
+                    김한신<br>
+                    MBTI : ESFP<br>
+                    Blog : https://funold16.tistory.com/<br>
+                    Github : https://github.com/kimhanshin4<br>
+                </p>
+            </div>
+            </div>
+            <div class="div-space-comment">
+                <div class="wood-image">
+                <p class="text-center3">
+                    정지명<br>
+                    MBTI : ISTJ<br>
+                    Blog : https://velog.io/@jimyung0418<br>
+                    Github : https://github.com/jimyung0418<br>
+                </p>
+            </div>
+            </div>
+            <div class="div-space-comment">
+                <div class="wood-image">
+                <p class="text-center3">
+                    장규빈<br>
+                    MBTI : ISFP<br>
+                    Blog : https://velog.io/@jac01122<br>
+                    Github : https://github.com/Binsreoun<br>
+                </p>
+                </div>
+            </div>
+        </div>
+        <!--첫번째 원-->
+        <div class="div-left">
+            <div class="div-left-column">
+                <div class="div-space">
+                    <a href="hanshin-per-index.html">
+                        <button class="svg-button rounded-image_left_1">
+                            <svg class="svg-left" width="140" height="140">
+                                <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="transparent" />
+                                <text x="50%" y="50%" font-size="20" fill="white" text-anchor="middle"
+                                    dominant-baseline="middle">
+                                    <tspan x="50%" dy="0em">김한신</tspan>
+
+                                </text>
+                            </svg>
+                        </button>
+                        <img src="img/Hanshin.jpg" alt="이미지 설명" class="rounded-image_sung">
+                    </a>
+                </div>
+
+                <!--첫번째 원-->
+                <!--두번째 원-->
+                <div class="div-space  hansin-margin_1">
+                    <a href="jimyung_personal.html">
+                        <button class="svg-button rounded-image_left_1">
+                            <svg class="svg-left" width="140" height="140">
+                                <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="transparent" />
+                                <text x="50%" y="50%" font-size="20" fill="black" text-anchor="middle"
+                                    dominant-baseline="middle">
+                                    <tspan x="50%" dy="0em">정지명</tspan>
+
+                                </text>
+                            </svg>
+                        </button>
+                        <img src="img/jimyung_profile.jpg" alt="이미지 설명" class="rounded-image_sung">
+                    </a>
+                </div>
+                <!--두번째 원-->
+                <!--세번째 원-->
+                <div class="div-space  hansin-margin_1">
+                    <a href="gyubin.html">
+                        <button class="svg-button rounded-image_left_1">
+                            <svg class="svg-left" width="140" height="140">
+                                <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="transparent" />
+                                <text x="50%" y="50%" font-size="20"  text-anchor="middle"
+                                    dominant-baseline="middle">
+                                    <tspan x="46%" dy="0em"fill="black">장규</tspan>
+                                    <tspan x="63%" dy="-0.03em"fill="white">빈</tspan>
+                                </text>
+                            </svg>
+                        </button>
+                        <img src="img/JJ.jpg" alt="이미지 설명" class="rounded-image_sung">
+                    </a>
+                    <!--세번째 원-->
+                </div>
+
+            </div>
+        </div>
+        <div class="div-center">
+            <div class="circle">
+                <svg width="240" height="240">
+                    <circle cx="120" cy="120" r="118" stroke="black" stroke-width="2" fill="rgba(205, 255, 172, 0.5)" />
+                    <text class="TeamMainTextCircle" x="50%" y="50%" font-size="37" fill="black" text-anchor="middle" dominant-baseline="middle" font-weight="600">
+                        <tspan x="50%" dy="-0.5em">팀원을 소개</tspan>
+                        <tspan x="49%" dy="1em">하도록 하지</tspan>
+                    </text>
+                </svg>
+            </div>
+
+            <div class="mind-map">
+
+                <div class="node">
+                    <div class="connector-vertical"></div> <!-- 수직 선 -->
+                    <div class="connector-horizontal-right"></div> <!-- 수평 선 -->
+                    <!-- 오른쪽 원 -->
+                    <div class="connector-vertical"></div> <!-- 수직 선 -->
+
+                    <div class="connector-horizontal-left"></div> <!-- 수평 선 -->
+                    <!-- 왼쪽 원 -->
+                    <div class="connector-vertical"></div> <!-- 수직 선 -->
+
+                    <div class="connector-horizontal-right"></div> <!-- 수평 선 -->
+                    <!-- 오른쪽 원 -->
+                    <div class="connector-vertical"></div> <!-- 수직 선 -->
+                    <div class="connector-horizontal-left"></div> <!-- 수평 선 -->
+                    <!-- 왼쪽 원 -->
+
+                    <div class="connector-vertical"></div> <!-- 수직 선 -->
+
+                    <div class="connector-horizontal-right"></div> <!-- 수평 선 -->
+                    <!-- 오른쪽 원 -->
+
+                </div>
+            </div>
+        </div>
+        <!--첫번째 원-->
+        <div class="div-right">
+            <div class="div-right-column">
+                <div class="div-space">
+                    <a href="sunghyuk/personalSung.html">
+                        <button class="svg-button rounded-button_text_sung">
+                            <svg class="svg-left" width="132" height="132">
+                                <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="transparent" />
+                                <text x="50%" y="50%" font-size="20" fill="white" text-anchor="middle"
+                                    dominant-baseline="middle">
+                                    <tspan x="50%" dy="0em">장숭혁</tspan>
+
+                                </text>
+                            </svg>
+                        </button>
+                        <img src="img/sunghyuk.jpg" alt="이미지 설명" class="rounded-image_sung">
+                    </a>
+                </div>
+
+                <!--첫번째 원-->
+                <!--두번째 원-->
+                <div class="div-space sung-margin">
+                    <a href="hangsik.html">
+                        <button class="svg-button rounded-button_text">
+                            <svg class="svg-left" width="140" height="140">
+                                <circle cx="70" cy="70" r="68" stroke="black" stroke-width="2" fill="transparent" />
+                                <text x="50%" y="50%" font-size="20" fill="white" text-anchor="middle" dominant-baseline="middle">
+                                    <tspan x="50%" dy="0em">신항식</tspan>
+                                </text>
+                            </svg>
+                        </button>
+                        <img src="img/image4_hs.jpg" alt="이미지 설명" class="rounded-image_shin">
+                    </a> 
+                </div>
+                
+                
+                
+                <!--두번째 원-->
+
+
+
+            </div>
+        </div>
+
+        <div class="div-right-comment right-text-position">
+
+            <div class="div-space-comment2">
+                <div class="wood-image">
+                <p class="text-center4">
+                    장숭혁<br>
+                    MBTI : INFP<br>
+                    Blog : https://velog.io/@tarantula<br>
+                    Github : https://github.com/Mcgeolypazun<br>
+                </p>
+                </div>
+            </div>
+            <div class="div-space-comment2 right-text-position2">
+                <div class="wood-image">
+                <p class="text-center4">
+                    신항식<br>
+                    MBTI : INTP<br>
+                    Blog : https://1907hgt.tistory.com/<br>
+                    Github : https://github.com/kinghangsik<br>
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<br><br><br><br><br>-->
+    <!--장숭혁-->
+    <!--정지명-->
+    <div class="container_j" id="HSGoal">
+
+        <div class="left_j">
+            <div class="left_title_j">
+                <h1>자스민의 목표</h1>
+            </div>
+            <div class="goal_j">
+                <p>1. 포기하는 사람 없이 끝까지 함께한다.</p>
+                <p>2. 항상 최선을 다하여 후회가 남지 않도록 한다.</p>
+                <p>3. 각자 계획했던 디자인 및 기능들을 최대한 구현한다.</p>
+                <p>4. 자기개발을 위해 꾸준히 TIL 작성하는 것을 목표로 한다.</p>
+                <p>5. 팀 활동을 통해 협업에 익숙해진다.</p>
+            </div>
+        </div>
+
+        <div class="right_j">
+            <div class="right_title_j">
+                <h1>우리 이거 약속하자</h1>
+            </div>
+            <div class=" promise_j">
+                <p>1. 서로 배려하고 존중하자.</p>
+                <p>2. 힘들어도 재밌게 즐기면서 나아가자.</p>
+                <p>3. 서로 맡은 바 최선을 다하자.</p>
+                <p>4. 건강을 잘 챙기자.</p>
+                <p>5. 지각을 하지 말고 시간 약속을 잘 지키자</p>
+            </div>
+        </div>
+    </div>
+    <!--정지명-->
+    <!--신항식-->
+    <section class="guestBookBox">
+        <div class="container" id="HSGuestBook">
+            <div class="text-center">
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="GUEST_BOOK"> GUEST BOOK </h1>
+                    <br>
+                    <br>
+                    <div class="mycards">
+                        <div id="card" class="row row-cols-1 row-cols-md-4 g-3">
+                        </div>
+                    </div>
+
+                    <h1 class="Message_Box_Title">MESSAGE BOX</h1>
+                </div>
+                <div class="Message_Box_Content">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name*">
+
+                        <label for="exampleFormControlInput1" class="form-label">Message</label>
+                        <input type="text" class="form-control" id="message" placeholder="Message*">
+
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password"
+                            placeholder="Please enter 5 characters" maxlength="5">
+                    </div>
+                    <button id="postingbtn" type="button">Leave a message</button>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- Footer-->
+<!-- <footer class="footer">
+    <div class="container2">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-start">Copyright ©2023 &copy; TeamJasmin. All rights reserved </div>
+            <div class="col-lg-4 my-3 my-lg-0">
+            </div>
+            <div class="col-lg-4 text-lg-end" style="margin: 0; padding: ;">
+                <a class="link-dark text-decoration-none"> If you want to know more about us</a>
+                <a class="link-dark text-decoration-none" href="http://www.google.co.kr">Search Here</a>
+            </div>
+        </div>
+    </div>
+</footer> -->
+<!--신항식-->
+
+</html>

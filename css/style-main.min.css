@@ -1,0 +1,149 @@
+
+
+.judge{
+    background-color: #5428f2;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 33%;
+    flex: 1 1 33%;
+    padding: 0 15px;
+    margin-bottom: 60px;
+}
+
+.judge_right {
+    background-color: #5428f2;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 33%;
+    flex: 1 1 33%;
+    padding: 0 15px;
+   
+    width: 40%;
+    margin-left: 780px;
+}
+
+.judge_left {
+    background-color: #9f67f7;
+    padding: 0 15px;
+   
+    width: 40%;
+    margin-left: 20px;
+}
+
+.judge__link {
+    display: block;
+    z-index: 1
+}
+
+.judge__info__inner,.judge__score__item {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+
+.judge__wrapper {
+    padding-left: 47px;
+    position: relative;
+}
+.judge__wrapper_right {
+    
+    padding-right: 47px;
+    position: relative;
+}
+
+.judge__wrapper:hover .judge__info, .judge__info_right {
+    background-color: #9f7f1e
+}
+
+.judge__wrapper_right:hover .judge__info_right {
+    background-color: #360477
+}
+
+.judge__wrapper:hover .judge__name:after {
+    opacity: 0
+}
+
+.judge__wrapper:hover .judge__name:before {
+    opacity: 1
+}
+
+.judge__info {
+    padding: 25px 0;
+    background-color: #dcd8ce;
+    transition: background .3s ease-in-out
+}
+
+.judge__info_right {
+    padding: 25px 0;
+    background-color: #dcd8ce;
+    transition: background .3s ease-in-out;
+    
+}
+
+.judge__info__inner {
+    display: flex;
+    -webkit-box-align: right;
+    -ms-flex-align: right;
+    align-items: right;
+    margin-right: -47px;
+}
+
+.judge__info__inner_left {
+    display: flex;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+    margin-left: -47px;
+    /* background-color: #00cdff; */
+}
+
+
+.judge__info__col.avatar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90px;
+    flex: 0 0 90px;
+    height: 90px;
+    order: 1;
+    margin-right: 15px; /* 이미지와 텍스트 사이의 간격 조절 */
+    overflow: hidden;
+    
+}
+
+.judge__info__col_right.avatar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90px;
+    flex: 0 0 90px;
+    height: 90px;
+    order: -1;
+    margin-right: 15px;
+    overflow: hidden;
+    /* background-color: #5428f2; */
+   
+}
+
+.judge__info__col.avatar img {
+    width: 100%;
+    height: auto
+}
+
+.judge__info__col.meta {
+    padding: 0 20px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow: hidden
+}
+
+.judge__total-score {
+    position: absolute;
+    right: 20px;
+    top: -16px;
+    font-size: 24px;
+    line-height: 30px
+}
+
+.judge__name {
+    position: relative;
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden
+}

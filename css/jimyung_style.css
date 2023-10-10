@@ -1,0 +1,155 @@
+body {
+    font-family: 'Gowun Batang', serif;
+}
+
+
+/* page 1 */
+
+.profile>img {
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid lightgray;
+}
+
+.intro {
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 100px;
+
+    color: lightgray;
+}
+
+.intro>span {
+    font-style: italic;
+}
+
+
+/* page 2 */
+
+.mbti {
+    background-color: #697296;
+    border: 1px solid #697296;
+    box-shadow: 5px 5px 5px #4d5a8d;
+
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    border-radius: 5px;
+}
+
+.mbti>img {
+    border-radius: 5px;
+    float: left;
+}
+
+.mbtiText {
+    color: lightgray;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    
+    float: right;
+    margin-left: 50px;
+}
+
+.mbtiText>h1, .strength>h1 ,.workingStyle>h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+/* page 3 */
+
+.strength {
+    color: lightgray;
+    background-color: #9690c7;
+    border: 1px solid #9690c7;
+    box-shadow: 5px 5px 5px #6f64c0;
+    text-align: center;
+    padding: 30px 50px 30px 50px;
+    border-radius: 5px;
+}
+
+
+/* page 4 */
+
+.workingStyle {
+    color: lightgray;
+    background-color: #aa84df;
+    border: 1px solid #aa84df;
+    box-shadow: 5px 5px 5px #7933db;
+
+    padding: 30px 50px 30px 50px;
+    border-radius: 5px;
+}
+
+
+/* page 5 */
+
+.myFavorites, .contactMe {
+    font-family: 'Roboto Slab', serif;
+    color: lightgray;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.favorites {
+    color: lightgray;
+}
+
+.cards {
+    display:inline-flex;
+    margin-top: 60px;
+}
+
+.cardIndex {
+    text-align: center;
+    display: block;
+    text-align: center;
+
+}
+
+.cardText {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cardImg {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 7vh 5vh;
+    margin-bottom: 50px;
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 5px #c44783;
+}
+
+
+/* page 6 */
+
+.contact {
+    text-align: center;
+    align-items: center;
+}
+
+.contactImg {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 60px;
+}
+
+.ct {
+    margin-top: 80px;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-style: italic;
+    margin: 35px;
+}

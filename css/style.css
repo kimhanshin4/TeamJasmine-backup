@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+body{
+    font-family: 'Gowun Dodum', sans-serif!important;
+}
+
+.jas{
+    
+    background-color: rgb(198, 255, 245);
+    font-size: 130px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.page-section{
+    background-color: #FDF0F0;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    background: lightgray;
+    line-height: 4rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.alink {
+    text-decoration-line: none;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.TestDivs>div {
+    background-color: #feffd8;
+    height: 400px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#topBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: none;
+    z-index: 9;
+}
+
+.HeaderBox1 {
+    background-color: #ffe283;
+    padding: 10px 0px 10px 0px;
+}
+
+.HeaderBox2 {
+    background-color: #89faf0;
+    border: solid 1px hwb(192 60% 0%);
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#JBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50px;
+}
+
+#JasmineBox {
+    background-color: hwb(199 38% 0%);
+    /* box-shadow: 1px 1px 4px 0.2px hwb(187 27% 49%); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    border: solid 6px #ffeba9;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 15px 5px 0px 5px;
+}
+
+#JSubBox {
+    /* background-color: hwb(180 26% 0%); */
+    height: 55px;
+
+    /* border: solid 1px hwb(192 35% 40%); */
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: 30px;
+}
+
+#JSubBox>div {
+    background-color: hwb(192 38% 0%);
+    box-shadow: 1px 1.5px 4px 0.5px hwb(187 27% 49%);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    border: solid 4px hwb(192 74% 0%);
+    border-radius: 15px;
+    margin: 0px 0px 0px 7px;
+    padding: 0px 5px 0px 5px;
+}
+
+#JSubBox>div>a {
+    color: white;
+}
+
+#weather {
+    height: 30px;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(240, 229, 131);
+    box-shadow: 1px 1px 4px 0px hwb(187 27% 49%);
+    border: solid 4px hwb(192 74% 0%);
+    border-radius: 10px;
+
+    font-weight: 1000;
+
+    margin: 10px;
+    padding: 0px 5px 0px 5px;
+}
+
+#Jasmine {
+    color: white;
+    font-size: 33px;
+    font-weight: 800;
+    
+
+}
+
+#JSub {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Pepper {
+    height: 300px;
+    width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-image: url('https://img.freepik.com/premium-photo/a-bunch-of-red-chili-peppers-with-water-drops-on-a-black-background_901003-27356.jpg?w=2000');
+    background-position: center;
+    background-size: cover;
+}
+
+#topBtn {
+    background-color: #3ab0ff;
+    height: 30px;
+    width: 50px;
+    color: white;
+
+    border: transparent;
+    border-radius: 10px;
+
+}
+
+h4{
+    padding-top: 20px;
+}
+
+.container{
+
+    padding-top: 10px;
+    margin-top: 100px;
+    width:100%;
+    margin-right:auto;
+    margin-left:auto;
+    line-height:1.75;
+    height: 900px;
+    background-color: #FDF0F0;
+}
+
+.col{
+    height: 300px;
+    flex:0 0 auto;
+    width:33.33333333%
+}
+
+/* body{
+    background-color: rgb(243, 238, 231);
+} */
+
+.div-whole {
+
+    background-color: rgb(255, 255, 255);
+
+    height: 1350px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../img/baobab.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* 내용 추가 및 변경 가능 */
+
+    position: relative; /* 가상 요소 위치를 설정하기 위해 부모 요소를 상대 위치로 설정합니다. */
+}
+
+.div-whole::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+
+.div-left-comment {
+    /* background-color: cadetblue; */
+    padding-top: 18.5%;
+    margin-right: 3%;
+    margin-left: 5%;
+    
+}
+
+.div-right-comment {
+    /* background-color: cadetblue; */
+    padding-top: 28.5%;
+    margin-left: 3%;
+    margin-right: 5%;
+    
+}
+
+.div-space-comment {
+    /* margin-top: 10%; */
+    margin-bottom: 75%;
+    padding-bottom: 0%;
+
+}
+
+.div-space-comment2 {
+    /* margin-top: 10%; */
+    margin-bottom: 73%;
+    padding-bottom: 0%;
+}
+
+.div-left {
+
+    display: flex;
+    margin-right: -20px;
+    margin-top: 30px;
+    /* background-color: aqua; */
+}
+
+.div-right {
+
+    display: flex;
+    margin-left: -30px;
+    margin-top: 60px;
+    /* background-color: aqua; */
+}
+
+.div-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.div-left-column {
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* background-color: blue; */
+    /* 위치를 상대적으로 조절 */
+    top: 24%;
+    /* 공의 위아래 조절 */
+    right: 0px;
+    /* 공의 좌우 조절 */
+
+
+}
+
+.div-right-column {
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* background-color: blue; */
+    /* 위치를 상대적으로 조절 */
+    top: 37%;
+    /* 공의 위아래 조절 */
+    right: 0px;
+    /* 공의 좌우 조절 */
+
+
+
+}
+
+.div-space {
+    padding-bottom: 250px;
+    /* background-color: green; */
+}
+
+
+
+
+
+/* 스타일을 추가합니다. */
+.mind-map {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100px;
+    /* 너비를 200픽셀로 설정 */
+    height: 200px;
+    /* 높이를 100픽셀로 설정 */
+
+}
+
+.node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+
+}
+
+.connector-vertical {
+    display: flex;
+    width: 2px;
+    height: 200px;
+    background-color: #000;
+}
+
+.connector-vertical-short{
+    display: flex;
+    width: 2px;
+    height: 100px;
+    background-color: #000;
+}
+
+.connector-vertical-short-short{
+    display: flex;
+    width: 2px;
+    height: 70px;
+    background-color: #000;
+}
+
+.connector-horizontal-right {
+    display: flex;
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    margin-left: -100%;
+    /* 오른쪽으로 정렬 */
+}
+
+.connector-horizontal-left {
+    display: flex;
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    margin-right: -100%;
+    /* 왼쪽으로 정렬 */
+}
+
+/* .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100px;
+    
+    background-color: aqua;
+} */
+
+svg {
+    display: block;
+    /* background-color: greenyellow; */
+}
+
+.svg-right {
+    width: 140px;
+    height: 140px;
+}
+
+.svg-left {
+    width: 140px;
+    height: 140px;
+}
+
+ /* 버튼 스타일링 */
+.svg-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    border-radius: 100px;
+
+    
+}
+
+/* 버튼에 호버 스타일 적용 */
+.svg-button:hover {
+    /* background-color: rgba(77,77,77,.47); */
+}
+
+.text-center {
+    color: black;
+    font-size: 22px;
+    text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    vertical-align: middle; /* 텍스트를 수직 가운데 정렬합니다. */
+}
+.text-center3{
+    color: black;
+    font-size: 20px;
+    text-align: right; /* 텍스트를 가운데 정렬합니다. */
+
+}
+
+.text-center4 {
+    color: black;
+    font-size: 20px;
+    text-align: left; /* 텍스트를 가운데 정렬합니다. */
+}
+
+ /* wanna join us컨테이너 스타일링 */
+.center-container-wanna {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 20vh; /* 화면 높이에 따라 조절 (전체 화면 높이) */
+    /* background-color: rgb(136, 98, 71); */
+    margin-left: 70vh;
+    margin-right: 70vh;
+    border: 2px solid black; /* 테두리 추가 및 색상 설정 */
+}
+
+/* wanna join us 텍스트 스타일링 */
+.center-text-wanna {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container_j {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #B5CB99;
+}
+
+.left_j,
+.right_j {
+    margin: 0 10px;
+    text-align: center;
+    
+}
+
+.left_title_j,
+.right_title_j{
+    margin-bottom: 30px; 
+    border-radius: 15px;
+}
+
+.goal_j,
+.promise_j {
+    background-color:  rgb(255, 249, 222);
+    width: 700px;
+    height: 300px;
+    padding: 20px 20px;
+    box-shadow: 5px 5px 5px lightgray;
+    font-size: 24px;
+    border: 1px solid  rgb(255, 249, 222);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.guestBookBox{
+    background-color: rgb(255, 249, 222);
+}
+
+section#contact {
+    /* background-color: #212529;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.GUEST_BOOK {
+    color: white;
+    background-color: #1F4172;
+    margin: 0px auto 0px auto;
+}
+
+.Message_Box_Title {
+    color: white;
+    background-color: #132043;
+    margin: 100px auto 50px auto;
+}
+
+.Message_Box_Content {
+    border: 4px solid #132043;
+    border-radius: 50px;
+    width: 800px;
+    margin: 50px auto 50px auto;
+    padding: 40px;
+    color: white;
+}
+
+.Message_Box_Content>button {
+    background-color: white;
+    border: 4px solid #ffe283;    
+    border-radius: 15px;
+    width: 300px;
+    margin: 10px auto 0px auto;
+    font-size: 18px;
+}

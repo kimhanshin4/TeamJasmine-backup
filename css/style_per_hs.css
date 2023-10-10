@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+* {
+    font-family: 'Noto Serif KR', serif;
+}
+
+/* 상단 About me */
+.title {
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 2px color gray;
+}
+
+/* 증명사진 단락 정렬 */
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 증명사진 */
+.top_img {
+    border: solid 4px;
+    border-radius: 70%;
+    color: gainsboro
+}
+
+/* 연락처 */
+.contacts {
+    font-size: 15px;
+}
+
+.top_content {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+/*사진 3개 정렬 */
+.image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.image1 {
+    border-radius: 50px;
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.image2 {
+    border-radius: 50px;
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.image3 {
+    border-radius: 50px;
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+/* 증명사진*/
+.image4 {
+    border: double 5px;
+    border-radius: 5%;
+    color: gray;
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+
+/*body 문단간격 조절*/
+body {
+    line-height: 200%;
+
+}
+
+/*제목 태그*/
+.maintitle {
+    text-align: center;
+    font-size: 40px;
+}
+
+/*장점 정렬*/
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*커리어 단락*/
+.career-content-2 {
+    text-align: right;
+}
+
+.career {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.year {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+
+
+/*장점 box 제목*/
+.box_title {
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+    padding: 40px;
+    width: 90%
+}
+
+.box {
+    width: 47%;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    box-shadow: 2px 3px 0px 0px gray;
+}
+
+/* 커서 올릴 시 이미지 크게(모든 이미지 파일에 적용) */
+img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    /* 크롬 */
+    -moz-transform: scale(1.1);
+    /* 파이어폭스 */
+    -o-transform: scale(1.1);
+    /* 오페라 */
+    z-index: 1;
+    align-items: center;
+}

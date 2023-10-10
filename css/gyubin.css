@@ -1,0 +1,227 @@
+
+    header {
+        width: 100%;
+        height: 50px;
+        background-color: #0A4D9A;
+        position: fixed;
+        top: 0;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #0A4D9A;
+    }
+
+    body {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .Introduction-box {
+        height: 600px;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+        display: flex;
+    }
+
+    .promise {
+        padding-top: 50px;
+        width: 50%;
+        text-align: left;
+        padding-inline-start: 0;
+        padding-bottom: 50px;
+    }
+
+    .title {
+        font-size: 100px;
+        line-height: 120%;
+        color: #0A4D9A;
+    }
+
+    .title-name {
+        font-size: 120px;
+        line-height: 120%;
+        text-align: right;
+        color: white;
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: #0A4D9A;
+
+    }
+
+    img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .image-phone {
+        padding-top: 50px;
+        width: 50%;
+        padding-bottom: 50px;
+
+    }
+
+    .information {
+        font-size: 15px;
+        line-height: 70%;
+        text-align: right;
+    }
+
+    .picture {
+        margin-bottom: 30px;
+        text-align: right;
+
+    }
+
+    .Awards-box {
+        padding-top: 30px;
+        height: 300px;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+        display: flex;
+        padding-bottom: 30px;
+    }
+
+    .Education1 {
+        width: 50%;
+        border: 8px solid #0A4D9A;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .Education2 {
+        width: 50%;
+        border: 8px solid #0A4D9A;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .Education-title {
+        font-size: 30px;
+        text-indent: 40px;
+    }
+
+    .History-box {
+        padding-top: 30px;
+        height: 300px;
+        padding-left: 80px;
+        padding-right: 80px;
+        width: 100%;
+    }
+
+
+    .History-title {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .History-big {
+        width: 100%;
+        display: flex;
+    }
+
+    .History-mini1 {
+        width: 20%;
+
+        color: black;
+        display: flex;
+    }
+
+
+    .History-mini2 {
+        width: 20%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: black;
+        line-height: 70%;
+    }
+
+
+    .history-text {
+        color: red;
+    }
+
+    .Skile-box {
+        padding-top: 30px;
+        height: 350px;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+        display: flex;
+        padding-bottom: 30px;
+    }
+
+    .Skile {
+        width: 50%;
+        border: 8px solid #0A4D9A;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .progress {
+        width: 20%;
+    }
+
+    .Skill-mini {
+        display: flex;
+    }
+
+    .Skill-name {
+        text-align: center;
+        width: 20%;
+        font-size: 20px;
+    }
+
+    .Skill-progress {
+        width: 75%;
+    }
+
+    .Skill-level {
+        padding-left: 10px;
+        width: 10%;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #circle1 {
+        width: 100px;
+        height: 50px;
+        border-radius: 40%;
+        background-color: #0A4D9A;
+        text-align: center;
+        line-height: 300%;
+        color: white;
+    }
+
+
+    #circle2 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0A4D9A;
+        text-align: center;
+        line-height: 300%;
+        color: white;
+    }
+
+    hr {
+        border: none;
+        border-top: 6px dotted #0A4D9A;
+        color: #fff;
+        background-color: #fff;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    progress {
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        color: #0A4D9A;
+    }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="topBtn" type="button" class="topBtn">Top</button>
+    <link href="./css/header-style.css" rel="stylesheet">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script/hanshin-header-script.js">
+    // $(function () {
+    //     $(window).scroll(function () {
+    //         if ($(this).scrollTop() > 200) {
+    //             $('#topBtn').fadeIn();
+    //         }
+    //         else { $('#topBtn').fadeOut(); }
+    //     });
+    //     $("#topBtn").click(function () {
+    //         $('html,body').animate({ scrollTop: 0 }, 300);
+    //         return false;
+    //     });
+    // });
+    // $(document).ready(function () {
+    //     let url = 'http://spartacodingclub.shop/sparta_api/weather/seoul'
+    //     fetch(url).then(res => res.json()).then(data => {
+    //         let nalssi = data['clouds']
+    //         let ondo = data['temp']
+
+    //         if (ondo > 30) {
+    //             $('#weather').append('<span class="text-danger">더워 죽어요;<span>')
+    //         } else if (ondo < 15) {
+    //             $('#weather').append('<span class="text-info">추워 죽어요;</span>')
+    //         } else {
+    //             $('#weather').append('<span class="text-success">구름<span id="clouds"></span>에 온도 적당♬</span>')
+    //             $('#clouds').append(nalssi)
+    //         }
+    //     })
+    // })
+</script>
+<style>
+    
+</style>
+
+<body>
+    <div id="HeaderBox1" class="HeaderBox1">
+        <header id="HeaderBox2" class="HeaderBox2">
+            <div id="JBox" class="">
+                <div id="JasmineBox" class="Jasmine">
+                    <p><a href="#Jasmine" id="Jasmine" class="">자스민</a></p>
+                </div>
+            </div>
+            <div id="JSubBox" class="JSubBox">
+                <div>
+                    <a href="#Introduce" id="JSub" class="">우리팀은</a>
+                </div>
+                <div>
+                    <a href="#Characteristic" id="JSub" class="">팀 특징</a>
+                </div>
+                <div>
+                    <a href="#Goal" id="JSub" class="">목표</a>
+                </div>
+                <div>
+                    <a href="#Promises" id="JSub" class="">약속</a>
+                </div>
+                <div>
+                    <a href="#GuestBook" id="JSub" class="">방명록</a>
+                </div>
+                <div>
+                    <a href="#Contact" id="JSub" class="">연락처</a>
+                </div>
+                <p id="weather" class="">오늘은~</p>
+            </div>
+            <div id="weatherBox">
+            </div>
+        </header>
+    </div>
+
+    <div id="TestDivs" class="TestDivs">
+        <div id="Introduce">
+            <p>팀 소개</p>
+        </div>
+        <div id="Characteristic">
+            <p>우리팀 특징</p>
+            <div id="Pepper" class="Pepper">
+            </div>
+        </div>
+        <div id="Goal">
+            <p>목표</p>
+        </div>
+        <div id="Promises">
+            <p>우리들의 약속</p>
+        </div>
+        <div id="GuestBook">
+            <p>방명록</p>
+        </div>
+        <div id="Contact">
+            <p>연락처</p>
+        </div>
+        <div id="Test4">
+            <p></p>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+* {
+    font-family: 'Stylish', sans-serif;
+}
+
+body {
+    background-color: rgba(10, 4, 1, 0.952);
+}
+
+.profileP {
+    width: 300px;
+    height: 300px;
+    /* background-color: rgb(255, 236, 200); */
+    border-radius: 50%;
+
+    background-image: url('../img/Hanshin.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* border: solid 1px white; */
+    border-radius: 10px;
+    margin: 10px 10px 0px 10px;
+    padding: 30px;
+}
+
+.Bigdiv0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: solid 1px white;
+    border-radius: 10px;
+    margin: 25px 10px 0px 10px;
+    padding: 10px;
+
+    color: white;
+}
+
+.Bigdiv1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* border: solid 1px white; */
+    border-radius: 10px;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+
+    color: white;
+}
+
+.Mediumdiv1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: dashed 1px white;
+    border-radius: 10px;
+    margin: 15px 10px 0px 10px;
+    padding: 10px;
+
+    color: white;
+}
+
+.Mediumdiv2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    /* border: solid 1px white; */
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+    padding: 0px;
+
+    color: white;
+}
+
+.Smalldiv1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: solid 1px white;
+    border-radius: 10px;
+    margin: 5px 10px 5px 10px;
+    padding: 10px 10px 0px 10px;
+
+    color: white;
+}
+
+.guinnessP {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 5px 0px;
+
+    background-image: url('https://post-phinf.pstatic.net/MjAxNzA3MDZfMTAx/MDAxNDk5Mjk4ODE0Mjk3.aFSB2k7cZNzAqCusjCpPG2HmrErw7rJMILwXI2rEIuYg.msFYs_n6phlUTxtKNeMa8l6o8mIBFbXyX57JnRwNa0Yg.PNG/image01.png?type=w800_q75');
+    background-position: center;
+    background-size: cover;
+}
+
+.voldBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 5px 0px;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.voldP {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 3px 5px 3px;
+
+    background-image: url('https://image.fmkorea.com/files/attach/new3/20221025/486263/4598574513/5143179071/92954556dd134caff2ff69cea87aa346.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.voldP2 {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 3px 5px 3px;
+
+    background-image: url('https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/26fc/d5151581bee64065e7c10d805c3a19f8801e32dd3a839482b53bb4db6c3b.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.voldP3 {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 3px 5px 3px;
+
+    background-image: url('../img/Voldemort_wand.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+.linkbox {
+    margin-bottom : 15px;
+}
+.linkbox>a{
+    color: white;
+    border : solid 1px white;
+
+    margin:0px 3px;
+}

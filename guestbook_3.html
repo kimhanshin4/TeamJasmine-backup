@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Agency - Start Bootstrap Theme</title>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- 제이쿼리!!!!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 부트스트랩~!!!!-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="css/styles_hs.css" rel="stylesheet" />
+
+
+    <script type="module">
+        // Firebase SDK 라이브러리 가져오기
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        // Firebase 구성 정보 설정
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhEYXbSXaESon5xYLNfwlxP8pbm3zgdpM",
+            authDomain: "sparta-ebe55.firebaseapp.com",
+            projectId: "sparta-ebe55",
+            storageBucket: "sparta-ebe55.appspot.com",
+            messagingSenderId: "552512521607",
+            appId: "1:552512521607:web:f02f0597f91b63ec32ff22",
+            measurementId: "G-YRNVYPMN1T"
+        };
+        // Firebase 인스턴스 초기화
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        //포스팅 버튼
+        $("#postingbtn").click(async function () {
+            let name = $('#name').val();
+            let message = $('#message').val();
+            
+
+            // Firebase 데이터 보내기
+            let doc = { 'name': name, 'message': message };
+            await addDoc(collection(db, "Sprta_Mini_Pj"), doc);
+            alert('메세지가 저장되었습니다!');
+            window.location.reload();
+        })
+            // Firebase 데이터 가져오기
+            let docs = await getDocs(collection(db, "Sprta_Mini_Pj"));
+            docs.forEach((doc) => {
+                let row = doc.data();
+                console.log(row);
+                let name = row['name'];
+                let message = row['message'];
+                let temp_html = `
+            <div class="col">
+                        <div class="card">
+                            <img src="https://s3.ap-northeast-2.amazonaws.com/blog.spartacodingclub.kr/210709_blog_4.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${name}</h5>
+                                <p class="card-text">${message}</p>
+                            </div>
+                        </div>
+                    </div>`
+                $('#card').append(temp_html)
+            });
+    </script>
+</head>
+
+<body>
+    <section id="contact">
+        <div class="container">
+            <div class="text-center">
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="GUEST_BOOK"> GUEST BOOK </h1>
+                    <br>
+                    <br>
+                    <div class="mycards">
+                        <div id="card" class="row row-cols-1 row-cols-md-4 g-3">
+                        </div>
+                    </div>
+
+                    <h1 class="Message_Box_Title">MESSAGE BOX</h1>
+                </div>
+                <div class="Message_Box_Content">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name*">
+
+                        <label for="exampleFormControlInput1" class="form-label">Message</label>
+                        <input type="text" class="form-control" id="message" placeholder="Message*">
+
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password"
+                            placeholder="Please enter 5 characters" maxlength="5">
+                    </div>
+                    <button id="postingbtn" type="button" class="btn btn-outline-warning">Leave a message</button>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- Footer-->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-start">Copyright ©2023 &copy; TeamJasmin. All rights reserved </div>
+            <div class="col-lg-4 my-3 my-lg-0">
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a class="link-dark text-decoration-none"> If you want to know more about us &nbsp;</a>
+                <a class="link-dark text-decoration-none" href="http://www.google.co.kr">Search Here</a>
+            </div>
+        </div>
+    </div>
+</footer>
